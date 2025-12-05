@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Menu, X } from 'lucide-react';
+import { Search, Menu, X, User } from 'lucide-react';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,6 +21,9 @@ function Header() {
             <Link to="/" className="text-text-primary hover:text-brand-orange transition">
               Home
             </Link>
+            <a href="#" className="text-text-primary hover:text-brand-orange transition">
+              News
+            </a>
             <Link to="/events" className="text-text-primary hover:text-brand-orange transition">
               Events
             </Link>
@@ -31,20 +34,37 @@ function Header() {
               Journal
             </a>
             <a href="#" className="text-text-primary hover:text-brand-orange transition">
+              Membership
+            </a>
+            <a href="#" className="text-text-primary hover:text-brand-orange transition">
+              Conference
+            </a>
+            <a href="#" className="text-text-primary hover:text-brand-orange transition">
               About
             </a>
           </nav>
 
-          {/* Right side - Search & Login */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* Right side - Search & Join/Account */}
+          <div className="hidden md:flex items-center space-x-6">
             <button className="text-text-secondary hover:text-brand-orange transition">
               <Search size={20} />
             </button>
+            
+            {/* This would show when logged in - for now it's hidden */}
+            {/* <a 
+              href="#" 
+              className="flex items-center space-x-2 text-text-primary hover:text-brand-orange transition font-medium"
+            >
+              <User size={20} />
+              <span>My Account</span>
+            </a> */}
+            
+            {/* This shows when logged out */}
             <Link 
               to="/login" 
-              className="bg-brand-orange text-white px-4 py-2 rounded hover:bg-orange-hover transition"
+              className="bg-brand-orange text-white px-6 py-2 rounded hover:bg-orange-hover transition font-semibold"
             >
-              Login
+              Join ITG
             </Link>
           </div>
 
@@ -60,9 +80,16 @@ function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden py-4 space-y-2">
+            <a href="#" className="block py-2 text-text-primary hover:text-brand-orange font-semibold">
+              My Account
+            </a>
+            <div className="border-b border-border-color my-2"></div>
             <Link to="/" className="block py-2 text-text-primary hover:text-brand-orange">
               Home
             </Link>
+            <a href="#" className="block py-2 text-text-primary hover:text-brand-orange">
+              News
+            </a>
             <Link to="/events" className="block py-2 text-text-primary hover:text-brand-orange">
               Events
             </Link>
@@ -71,6 +98,13 @@ function Header() {
             </Link>
             <a href="#" className="block py-2 text-text-primary hover:text-brand-orange">
               Journal
+            </a>
+            <a href="#" className="block py-2 text-text-primary hover:text-brand-orange">
+              Membership
+            </a>
+
+            <a href="#" className="block py-2 text-text-primary hover:text-brand-orange">
+             Conference
             </a>
             <a href="#" className="block py-2 text-text-primary hover:text-brand-orange">
               About

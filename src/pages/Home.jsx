@@ -1,23 +1,80 @@
 import React from 'react';
+import EventCard from '../components/EventCard';
+import NewsCard from '../components/NewsCard';
 
 function Home() {
+
+  const events = [
+    {
+      title: "ITG Conference 2025",
+      date: "June 15-18, 2025",
+      location: "Boston, MA",
+      description: "Join us for our annual conference featuring masterclasses, performances, and networking oppurtunities.",
+      featured: true
+    },
+    {
+      title: "Young Artists Competition",
+      date: "March 10, 2025",
+      location: "Virtual",
+      description: "Showcase your talent in our prestigious youth competition with cash prizes and performance oppurtunities."
+    },
+    {
+      title: "Regional Trumpet Festival",
+      date: "April 5, 2025",
+      location: "Chicago, IL",
+      description: "A day of workshops, performances, and exhibitions celebrating trumpet excellence."
+    }
+
+  ]
+
+  const news = [
+    {
+      title: "New Teaching Resources Available",
+      excerpt: "We've just released a comprehensive collection of teaching materials for trumpet educators at all levels.",
+      date: "2 days ago",
+      category: "Resources"
+    },
+    {
+      title: "Competition Winners Announced",
+      excerpt: "Congratulations to all participants in the 2024 Young Artists Competition. See the full list of winners and listen to their performances.",
+      date: "1 week ago",
+      category: "Competitions"
+    },
+    {
+      title: "Member Spotlight: Sarah Chen",
+      excerpt: "This month we're featuring principal trumpet Sarah Chen and her journey from student to professional orchestra musician.",
+      date: "2 weeks ago",
+      category: "Members"
+    }
+  ];
+
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-text-primary to-gray-800 text-white py-20">
+      <section className="relative bg-gradient-to-br from-text-primary via-gray-800 to-gray-900 text-white py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold mb-4">
-              International Trumpet Guild
+            <div className="inline-block bg-brand-orange/20 border border-brand-orange/30 rounded-full px-4 py-2 mb-6">
+              <span className="text-brand-orange font-semibold text-sm">
+                Est. 1974 • 5,000+ Members Worldwide
+              </span>
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              Empowering Trumpet Players 
+              <span className="text-brand-orange"> Worldwide</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Empowering trumpet players worldwide since 1974
+            
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Connect with a global community of trumpet enthusiasts, access world-class resources, 
+              and elevate your artistry through education, performance, and collaboration.
             </p>
-            <div className="flex space-x-4">
-              <button className="bg-brand-orange text-white px-6 py-3 rounded hover:bg-orange-hover transition">
-                Join ITG
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="bg-brand-orange text-white px-8 py-4 rounded-lg hover:bg-orange-hover transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                Become a Member
               </button>
-              <button className="border border-white text-white px-6 py-3 rounded hover:bg-white hover:text-text-primary transition">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-text-primary transition-all font-semibold text-lg">
                 Explore Events
               </button>
             </div>
@@ -28,38 +85,100 @@ function Home() {
       {/* Upcoming Events Section */}
       <section className="py-20 bg-bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-text-primary mb-8">Upcoming Events</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Placeholder cards */}
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-                <div className="w-full h-48 bg-bg-tertiary rounded mb-4"></div>
-                <h3 className="text-xl font-semibold text-text-primary mb-2">Event Title {i}</h3>
-                <p className="text-text-secondary mb-4">Date • Location</p>
-                <button className="text-brand-orange hover:text-orange-hover font-semibold">
-                  Learn More →
-                </button>
+          <div className="flex justify-between items-end mb-10" data-aos="fade-up">
+            <div>
+              <h2 className="text-4xl font-bold text-text-primary mb-2">Upcoming Events</h2>
+              <p className="text-text-secondary">Don't miss these exciting opportunities</p>
+            </div>
+            <button className="text-brand-orange hover:text-orange-hover font-semibold hidden md:block">
+              View All Events →
+            </button>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {events.map((event, index) => (
+              <div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
+              <EventCard key={index} {...event} />
               </div>
             ))}
           </div>
+
+          <button className="text-brand-orange hover:text-orange-hover font-semibold mt-6 md:hidden">
+            View All Events →
+          </button>
         </div>
       </section>
 
       {/* Latest News Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-text-primary mb-8">Latest News</h2>
+          <div className="flex justify-between items-end mb-10" data-aos="fade-up">
+            <div>
+              <h2 className="text-4xl font-bold text-text-primary mb-2">Latest News</h2>
+              <p className="text-text-secondary">Stay updated with the ITG community</p>
+            </div>
+            <button className="text-brand-orange hover:text-orange-hover font-semibold hidden md:block">
+              View All News →
+            </button>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Placeholder cards */}
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-white border border-border-color p-6 rounded-lg hover:shadow-lg transition">
-                <h3 className="text-xl font-semibold text-text-primary mb-2">News Headline {i}</h3>
-                <p className="text-text-secondary mb-4">Brief description of the news article...</p>
-                <button className="text-brand-orange hover:text-orange-hover font-semibold">
-                  Read More →
-                </button>
+            {news.map((article, index) => (
+              <div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
+              <NewsCard key={index} {...article} />
               </div>
             ))}
+          </div>
+
+          <button className="text-brand-orange hover:text-orange-hover font-semibold mt-6 md:hidden">
+            View All News →
+          </button>
+        </div>
+      </section>
+
+      {/* Why Join ITG Section */}
+      <section className="py-20 bg-bg-secondary">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16" data-aos="fade-up">
+            <h2 className="text-4xl font-bold text-text-primary mb-4">Why Join ITG?</h2>
+            <p className="text-xl text-text-secondary max-w-2xl mx-auto">
+              Become part of the world's premier trumpet organization
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Feature 1 */}
+            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center" data-aos="fade-up" data-aos-delay="0">
+              <div className="w-16 h-16 bg-brand-orange/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">📚</span>
+              </div>
+              <h3 className="text-xl font-bold text-text-primary mb-3">Exclusive Resources</h3>
+              <p className="text-text-secondary">
+                Access our comprehensive library of educational materials, recordings, and the prestigious ITG Journal.
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center" data-aos="fade-up" data-aos-delay="100">
+              <div className="w-16 h-16 bg-brand-orange/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">🌍</span>
+              </div>
+              <h3 className="text-xl font-bold text-text-primary mb-3">Global Network</h3>
+              <p className="text-text-secondary">
+                Connect with 5,000+ trumpet players, educators, and professionals across 64 countries worldwide.
+              </p>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center" data-aos="fade-up" data-aos-delay="200">
+              <div className="w-16 h-16 bg-brand-orange/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">🎺</span>
+              </div>
+              <h3 className="text-xl font-bold text-text-primary mb-3">Performance Opportunities</h3>
+              <p className="text-text-secondary">
+                Participate in competitions, festivals, and the annual ITG Conference featuring world-class artists.
+              </p>
+            </div>
           </div>
         </div>
       </section>

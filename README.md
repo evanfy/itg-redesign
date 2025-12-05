@@ -45,17 +45,24 @@ src/
 ```
 
 ## Current Progress
+
+**Day 1:**
 - [x] Project setup with React & Tailwind
 - [x] Custom color system implementation
 - [x] Header component with mobile menu
 - [x] Hero section with CTAs
 - [x] Basic homepage layout
 - [x] Footer component
-- [ ] Event cards component
-- [ ] Resources page design
-- [ ] Login page design
-- [ ] Scroll animations
-- [ ] Full mobile optimization
+
+**Day 2:**
+- [x] Built reusable EventCard and NewsCard components
+- [x] Improved hero section with better copy and gradient
+- [x] Added "Why Join ITG" benefits section
+- [x] Implemented smooth scroll animations (AOS)
+- [x] Updated navigation to match ITG structure (News, Journal, Resources Events, Membership, Conference)
+- [x] Enhanced footer with secondary links (Give, Store, Network, Contact)
+- [x] Added My Account and social media links
+- [x] Polished desktop and mobile layouts
 
 ## Running Locally
 ```bash
@@ -67,8 +74,8 @@ Opens on `http://localhost:3000`
 
 ## Screenshots
 
-**Homepage Hero & Layout**
-![Homepage Day 1](screenshots/day1-homepage.png)
+### Day 2 Progress - Homepage Complete
+![Homepage Full](screenshots/day2-homepage.png)
 
 ## About This Project
 
