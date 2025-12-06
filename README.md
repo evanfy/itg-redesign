@@ -87,4 +87,4 @@ This redesign was created as part of a portfolio project demonstrating:
 
 ---
 
-**Current Status:** Day 1 - Foundation complete
+**Current Status:** Day 2 - Homepage complete

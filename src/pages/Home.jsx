@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import EventCard from '../components/EventCard';
 import NewsCard from '../components/NewsCard';
 
@@ -56,7 +57,7 @@ function Home() {
           <div className="max-w-3xl">
             <div className="inline-block bg-brand-orange/20 border border-brand-orange/30 rounded-full px-4 py-2 mb-6">
               <span className="text-brand-orange font-semibold text-sm">
-                Est. 1974 • 5,000+ Members Worldwide
+                Est. 1975 • 5,000+ Members Worldwide
               </span>
             </div>
             
@@ -74,9 +75,12 @@ function Home() {
               <button className="bg-brand-orange text-white px-8 py-4 rounded-lg hover:bg-orange-hover transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
                 Become a Member
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-text-primary transition-all font-semibold text-lg">
+              <Link
+              to="/events"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-text-primary transition-all font-semibold text-lg text-center"
+              >
                 Explore Events
-              </button>
+                </Link>
             </div>
           </div>
         </div>
@@ -90,9 +94,9 @@ function Home() {
               <h2 className="text-4xl font-bold text-text-primary mb-2">Upcoming Events</h2>
               <p className="text-text-secondary">Don't miss these exciting opportunities</p>
             </div>
-            <button className="text-brand-orange hover:text-orange-hover font-semibold hidden md:block">
+            <Link to="/events" className="text-brand-orange hover:text-orange-hover font-semibold hidden md:block">
               View All Events →
-            </button>
+            </Link>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -103,9 +107,9 @@ function Home() {
             ))}
           </div>
 
-          <button className="text-brand-orange hover:text-orange-hover font-semibold mt-6 md:hidden">
+          <Link to="/events" className="text-brand-orange hover:text-orange-hover font-semibold mt-6 md:hidden">
             View All Events →
-          </button>
+          </Link>
         </div>
       </section>
 
@@ -117,9 +121,9 @@ function Home() {
               <h2 className="text-4xl font-bold text-text-primary mb-2">Latest News</h2>
               <p className="text-text-secondary">Stay updated with the ITG community</p>
             </div>
-            <button className="text-brand-orange hover:text-orange-hover font-semibold hidden md:block">
+            <Link to="/news" className="text-brand-orange hover:text-orange-hover font-semibold hidden md:block">
               View All News →
-            </button>
+            </Link>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -130,9 +134,9 @@ function Home() {
             ))}
           </div>
 
-          <button className="text-brand-orange hover:text-orange-hover font-semibold mt-6 md:hidden">
+          <Link to="/news" className="text-brand-orange hover:text-orange-hover font-semibold mt-6 md:hidden">
             View All News →
-          </button>
+          </Link>
         </div>
       </section>
 
