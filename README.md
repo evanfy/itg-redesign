@@ -64,6 +64,16 @@ src/
 - [x] Added My Account and social media links
 - [x] Polished desktop and mobile layouts
 
+**Day 3:** Complete
+- [x] Built complete Events page with filtering and search
+- [x] Built Resources page with organized categories
+- [x] Built Login page with form validation
+- [x] Connected all navigation flows
+- [x] Sticky filter bars and search functionality
+- [x] Category-based resource organization
+- [x] Professional authentication UI
+
+
 ## Running Locally
 ```bash
 npm install
@@ -77,6 +87,18 @@ Opens on `http://localhost:3000`
 ### Day 2 Progress - Homepage Complete
 ![Homepage Full](screenshots/day2-homepage.png)
 
+### Day 3 Progress - Events, Resources, and Login Pages Complete
+
+**Events Page**
+![Events Page](screenshots/day3-eventspage.png)
+
+**Resources Page**
+![Resources Page](screenshots/day3-resourcespage1.png)
+![Resources Page](screenshots/day3-resourcespage2.png)
+
+**Login Page**
+![Login Page](screenshots/day3-loginpage.png)
+
 ## About This Project
 
 This redesign was created as part of a portfolio project demonstrating:
@@ -87,4 +109,4 @@ This redesign was created as part of a portfolio project demonstrating:
 
 ---
 
-**Current Status:** Day 2 - Homepage complete
+**Current Status:** Day 3 - Events, Resources, and Login Pages Complete
