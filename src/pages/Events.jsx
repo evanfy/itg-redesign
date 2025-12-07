@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import EventCard from '../components/EventCard';
 import { Search, Calendar, Filter } from 'lucide-react';
 
@@ -14,6 +15,7 @@ function Events() {
       location: "Boston, MA",
       description: "Join us for our annual conference featuring masterclasses, performances, and networking opportunities with world-renowned trumpet artists.",
       category: "conference",
+      imageUrl: "/images/event1.jpg",
       featured: true
     },
     {
@@ -21,6 +23,7 @@ function Events() {
       date: "March 10, 2025",
       location: "Virtual",
       description: "Showcase your talent in our prestigious youth competition with cash prizes and performance opportunities.",
+      imageUrl: "/images/event2.jpg",
       category: "competition"
     },
     {
@@ -28,6 +31,7 @@ function Events() {
       date: "April 5, 2025",
       location: "Chicago, IL",
       description: "A day of workshops, performances, and exhibitions celebrating trumpet excellence in the Midwest region.",
+      imageUrl: "/images/event3.jpg",
       category: "upcoming"
     },
     {
@@ -189,9 +193,12 @@ function Events() {
           <p className="text-xl text-text-secondary mb-8">
             Become a member to get exclusive early access to event registration and member-only competitions.
           </p>
-          <button className="bg-brand-orange text-white px-8 py-3 rounded-lg hover:bg-orange-hover transition font-semibold text-lg">
+          <Link 
+            to="/login"
+            className="bg-brand-orange text-white px-8 py-3 rounded-lg hover:bg-orange-hover transition font-semibold text-lg inline-block"
+          >
             Join ITG Today
-          </button>
+          </Link>
         </div>
       </section>
     </div>

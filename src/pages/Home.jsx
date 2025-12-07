@@ -7,23 +7,26 @@ function Home() {
 
   const events = [
     {
-      title: "ITG Conference 2025",
-      date: "June 15-18, 2025",
-      location: "Boston, MA",
+      title: "ITG Conference 2026",
+      date: "May 26-30, 2026",
+      location: "Rochester, NY",
       description: "Join us for our annual conference featuring masterclasses, performances, and networking oppurtunities.",
+      imageUrl: "/images/event1.jpg",
       featured: true
     },
     {
       title: "Young Artists Competition",
-      date: "March 10, 2025",
+      date: "July 10, 2026",
       location: "Virtual",
-      description: "Showcase your talent in our prestigious youth competition with cash prizes and performance oppurtunities."
+      description: "Showcase your talent in our prestigious youth competition with cash prizes and performance oppurtunities.",
+      imageUrl: "/images/event3.jpg",
     },
     {
       title: "Regional Trumpet Festival",
-      date: "April 5, 2025",
+      date: "September 5, 2026",
       location: "Chicago, IL",
-      description: "A day of workshops, performances, and exhibitions celebrating trumpet excellence."
+      description: "A day of workshops, performances, and exhibitions celebrating trumpet excellence.",
+      imageUrl: "/images/event2.jpg",
     }
 
   ]
@@ -33,19 +36,22 @@ function Home() {
       title: "New Teaching Resources Available",
       excerpt: "We've just released a comprehensive collection of teaching materials for trumpet educators at all levels.",
       date: "2 days ago",
-      category: "Resources"
+      category: "Resources",
+      imageUrl: "/images/news1.jpg"
     },
     {
       title: "Competition Winners Announced",
-      excerpt: "Congratulations to all participants in the 2024 Young Artists Competition. See the full list of winners and listen to their performances.",
+      excerpt: "Congratulations to all participants in the 2025 Young Artists Competition. See the full list of winners and listen to their performances.",
       date: "1 week ago",
-      category: "Competitions"
+      category: "Competitions",
+      imageUrl: "/images/news2.jpg"
     },
     {
-      title: "Member Spotlight: Sarah Chen",
-      excerpt: "This month we're featuring principal trumpet Sarah Chen and her journey from student to professional orchestra musician.",
+      title: "Member Spotlight: Evan Atwell",
+      excerpt: "This month we're featuring principal trumpet Evan Atwell and his journey from student to professional orchestra musician.",
       date: "2 weeks ago",
-      category: "Members"
+      category: "Members",
+      imageUrl: "/images/news3.jpg"
     }
   ];
 
@@ -72,15 +78,18 @@ function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-brand-orange text-white px-8 py-4 rounded-lg hover:bg-orange-hover transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+              <Link 
+                to="/login"
+                className="bg-brand-orange text-white px-8 py-4 rounded-lg hover:bg-orange-hover transition-colors font-semibold text-lg shadow-lg hover:shadow-xl text-center inline-block"
+              >
                 Become a Member
-              </button>
+              </Link>
               <Link
-              to="/events"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-text-primary transition-all font-semibold text-lg text-center"
+                to="/events"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-text-primary transition-all font-semibold text-lg text-center"
               >
                 Explore Events
-                </Link>
+              </Link>
             </div>
           </div>
         </div>
