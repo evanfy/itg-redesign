@@ -130,9 +130,6 @@ function Home() {
               <h2 className="text-4xl font-bold text-text-primary mb-2">Latest News</h2>
               <p className="text-text-secondary">Stay updated with the ITG community</p>
             </div>
-            <Link to="/news" className="text-brand-orange hover:text-orange-hover font-semibold hidden md:block">
-              View All News →
-            </Link>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -142,10 +139,6 @@ function Home() {
               </div>
             ))}
           </div>
-
-          <Link to="/news" className="text-brand-orange hover:text-orange-hover font-semibold mt-6 md:hidden">
-            View All News →
-          </Link>
         </div>
       </section>
 

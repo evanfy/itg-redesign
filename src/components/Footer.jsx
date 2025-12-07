@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Youtube, Twitter, Facebook } from 'lucide-react';
 
 function Footer() {
@@ -9,9 +10,11 @@ function Footer() {
           
           {/* About ITG */}
           <div>
-            <div className="w-16 h-16 bg-brand-orange flex items-center justify-center text-white font-bold text-2xl mb-4">
-              ITG
-            </div>
+            <img 
+              src="/images/itg-logo.png" 
+              alt="International Trumpet Guild" 
+              className="h-16 w-auto mb-4"
+            />
             <p className="text-gray-400 text-sm">
               The International Trumpet Guild is dedicated to promoting excellence in trumpet performance and education worldwide.
             </p>
@@ -23,8 +26,8 @@ function Footer() {
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="text-gray-400 hover:text-brand-orange transition">About ITG</a></li>
               <li><a href="#" className="text-gray-400 hover:text-brand-orange transition">News</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-brand-orange transition">Events</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-brand-orange transition">Resources</a></li>
+              <li><Link to="/events" className="text-gray-400 hover:text-brand-orange transition">Events</Link></li>
+              <li><Link to="/resources" className="text-gray-400 hover:text-brand-orange transition">Resources</Link></li>
               <li><a href="#" className="text-gray-400 hover:text-brand-orange transition">Journal</a></li>
               <li><a href="#" className="text-gray-400 hover:text-brand-orange transition">Membership</a></li>
             </ul>

@@ -10,25 +10,25 @@ function Events() {
   // Sample events data (we'll expand this)
   const allEvents = [
     {
-      title: "ITG Conference 2025",
-      date: "June 15-18, 2025",
+      title: "ITG Conference 2026",
+      date: "June 15-18, 2026",
       location: "Boston, MA",
       description: "Join us for our annual conference featuring masterclasses, performances, and networking opportunities with world-renowned trumpet artists.",
-      category: "conference",
+      category: ["conference", "upcoming"],
       imageUrl: "/images/event1.jpg",
       featured: true
     },
     {
       title: "Young Artists Competition",
-      date: "March 10, 2025",
-      location: "Virtual",
+      date: "March 10, 2026",
+      location: ["Virtual", "upcoming"],
       description: "Showcase your talent in our prestigious youth competition with cash prizes and performance opportunities.",
       imageUrl: "/images/event2.jpg",
       category: "competition"
     },
     {
       title: "Regional Trumpet Festival",
-      date: "April 5, 2025",
+      date: "April 5, 2026",
       location: "Chicago, IL",
       description: "A day of workshops, performances, and exhibitions celebrating trumpet excellence in the Midwest region.",
       imageUrl: "/images/event3.jpg",
@@ -36,29 +36,29 @@ function Events() {
     },
     {
       title: "Jazz Trumpet Masterclass Series",
-      date: "February 20-22, 2025",
+      date: "February 20-22, 2026",
       location: "New Orleans, LA",
       description: "Three-day intensive masterclass series focusing on jazz improvisation and performance techniques.",
       category: "upcoming"
     },
     {
       title: "International Solo Competition",
-      date: "May 1, 2025",
+      date: "May 1, 2026",
       location: "Virtual",
       description: "Compete against the world's finest trumpet soloists. Open to all ages and skill levels with separate divisions.",
-      category: "competition"
+      category: ["competition", "upcoming"]
     },
     {
       title: "Orchestral Audition Workshop",
-      date: "March 15, 2025",
+      date: "March 15, 2026",
       location: "New York, NY",
       description: "Prepare for professional orchestral auditions with principal players from top orchestras.",
       category: "upcoming"
     },
     {
-      title: "ITG Conference 2024",
-      date: "June 10-13, 2024",
-      location: "Denver, CO",
+      title: "ITG Conference 2025",
+      date: "May 27-31, 2025",
+      location: "Salt Lake City, UT",
       description: "Our most successful conference to date with over 500 attendees from around the globe.",
       category: "past"
     },
@@ -67,13 +67,13 @@ function Events() {
       date: "July 8-21, 2025",
       location: "Los Angeles, CA",
       description: "Two-week intensive program for advanced high school and college students.",
-      category: "upcoming"
+      category: "past"
     }
   ];
 
   // Filter events based on active category and search
   const filteredEvents = allEvents.filter(event => {
-    const matchesFilter = activeFilter === 'all' || event.category === activeFilter;
+    const matchesFilter = activeFilter === 'all' || event.category.includes(activeFilter);
     const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           event.location.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesFilter && matchesSearch;

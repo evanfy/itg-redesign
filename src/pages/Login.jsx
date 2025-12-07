@@ -29,9 +29,11 @@ function Login() {
         {/* Logo and Header */}
         <div className="text-center mb-8" data-aos="fade-up">
           <Link to="/" className="inline-block">
-            <div className="w-20 h-20 bg-brand-orange flex items-center justify-center text-white font-bold text-3xl mx-auto mb-4 rounded-lg">
-              ITG
-            </div>
+            <img 
+              src="/images/itg-logo.png" 
+              alt="International Trumpet Guild" 
+              className="h-20 w-auto mx-auto mb-4"
+            />
           </Link>
           <h2 className="text-3xl font-bold text-text-primary mb-2">
             Welcome Back

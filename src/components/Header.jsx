@@ -11,9 +11,11 @@ function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="w-12 h-12 bg-brand-orange flex items-center justify-center text-white font-bold text-xl">
-              ITG
-            </div>
+            <img 
+              src="/images/itg-logo.png" 
+              alt="International Trumpet Guild" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -21,15 +23,15 @@ function Header() {
             <Link to="/" className="text-text-primary hover:text-brand-orange transition">
               Home
             </Link>
-            <a href="#" className="text-text-primary hover:text-brand-orange transition">
-              News
-            </a>
             <Link to="/events" className="text-text-primary hover:text-brand-orange transition">
               Events
             </Link>
             <Link to="/resources" className="text-text-primary hover:text-brand-orange transition">
               Resources
             </Link>
+            <a href="#" className="text-text-primary hover:text-brand-orange transition">
+              News
+            </a>
             <a href="#" className="text-text-primary hover:text-brand-orange transition">
               Journal
             </a>
